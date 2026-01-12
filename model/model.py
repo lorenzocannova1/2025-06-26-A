@@ -27,7 +27,6 @@ class Model:
         for i in nodi:
             for j in nodi:
                 if i.circuitId < j.circuitId and self.calcolaPesoArco(i,j) > 0:
-                    peso = self.calcolaPesoArco(i, j)
                     self.grafo.add_edge(i, j, weight=self.calcolaPesoArco(i, j))
 
     def calcolaPesoArco(self, i, j):
